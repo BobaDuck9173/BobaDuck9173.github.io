@@ -1,0 +1,77 @@
+body{
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.box-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gainsboro;
+    border-radius: 20px;
+}
+
+.row{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#name, #phone, #email, #address, #message{
+    color: #343434;
+    text-shadow: #343434;
+    border-radius: 10px;
+    border: solid 2px rgba(128, 128, 128, 0.55);
+    outline: none;
+    transition: 0.4s;
+    color: #424549;
+    opacity: 0.75;
+}
+
+#name:is(:hover, :focus), #phone:is(:hover, :focus), #email:is(:hover, :focus), #address:is(:hover, :focus){
+    transform: scale(1.01);
+    box-shadow: 5px 5px 3px rgb(0,0,0,0.5);
+    opacity: 2;
+}
+
+#message:is(:hover, :focus){
+    transform: scale(1.01);
+    box-shadow: 5px 5px 3px rgb(0,0,0,0.5);
+    opacity: 2;
+}
+
+#message::-webkit-scrollbar{
+    width: 0;
+}
+
+.btn{
+    margin-top: 15px;
+    padding: 5px 35px 5px 35px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #3434343b;
+    border-radius: 18px;
+    color: #383c3f;
+    cursor: pointer;
+    border: solid 2px #424549;
+    transition: 0.5s;
+    user-select: none;
+}
+
+.btn:hover{
+    border: solid 2px #424549;
+    color: white;
+    background-color: #424549;
+    transform: scale(1.05);
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+}
+
+label{
+    font-weight: 600;
+    font-size: 20px;
+    user-select: none;
+    color: #383c3f;
+    font-family: sans-serif;
+}
