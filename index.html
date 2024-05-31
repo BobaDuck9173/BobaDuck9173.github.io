@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="/scripts/event.js"></script>
+    <title>Pringles Sneaker</title>
+</head>
+
+<body>
+    <section class="loader-section" id="load">
+        <div class="loader">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:9;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+        </div>
+    </section>
+
+    <script>
+        const timer = setTimeout(stopAnimate, 3000);
+        
+        function stopAnimate(){
+            document.getElementById("load").style.display = "none";
+            document.getElementById("hero").style.display = "block";
+        }
+        
+    </script>
+
+    <!--Header-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid" id="menuBar">
+            <a class="navbar-brand" href="index.html"><img src="/images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#link-sale-off-here">Sale off</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-us">About us</a>
+                        </li>
+                        <li class="nav-item" id="biBag">
+                            <a class="nav-link contact-btn-toggle" href="#"><i class="bi bi-bag"></i></a>
+                            <script>
+                                var contactOpening = 0;
+                                const contactBtn = document.querySelector(".contact-btn-toggle");
+                                contactBtn.addEventListener('click', () => {
+                                    if (contactOpening == 0) {
+                                        document.getElementById("contact-section").style.display = "flex";
+                                        contactOpening = 1;
+                                    }
+                                    else if (contactOpening == 1) {
+                                        document.getElementById("contact-section").style.display = "none";
+                                        contactOpening = 0;
+                                    }
+                                })
+
+                                const closeBtn = document.querySelector(".btn-close");
+                                closeBtn.addEventListener('click', ()=>{
+                                    document.getElementById("contact-section").style.display = "none";
+                                    contactOpening = 0;
+                                })
+                            </script>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Body-->
+    <section class="hero" id="hero">
+        <div class="contact-section" id="contact-section">
+            <h1 style="color: gainsboro;">Feel free to get in touch</h1>
+            <div class="contact-container">
+                <iframe src="/templates/info/index.html" frameborder="0" width="90%" height="85%"></iframe>
+            </div>
+        </div>
+        <div class="main-banner-section">
+            <div class="banner-container">
+                <img src="/images/banners/1280x500.png" alt="">
+            </div>
+        </div>
+
+        <div class="featuredSneaker">
+            <div class="featured-container">
+                <div class="imgCol">
+                    <img src="/images/banners/TBM-Featured.jpg">
+                    <div class="layout" id="layout-special-1" onclick="divClick('1')">
+                        <h3 class="TBU">Unicorn Low-top Trainers in Black</h3>
+                    </div>
+                </div>
+                <div class="imgCol">
+                    <img src="/images/banners/Balenciaga-Featured.-2jpg.jpg">
+                    <div class="layout" id="layout-special-4" onclick="divClick('4')">
+                        <h3 class="BTS">Balenciaga Track Sneaker in<br> White and Orange</h3>
+                    </div>
+                </div>
+                <div class="imgCol">
+                    <img src="/images/banners/TBM-Featured-2.jpg">
+                    <div class="layout" id="layout-special-2" onclick="divClick('2')">
+                        <h3 class="TBU">Unicorn Low-top Trainers<br> in White</h3>
+                    </div>
+                </div>
+                <div class="imgCol">
+                    <img src="/images/banners/Balenciaga-Featured-1by1.jpg">
+                    <div class="layout" id="layout-special-3" onclick="divClick('3')">
+                        <h3 class="BTS">Balenciaga Triple S Sneaker<br> in Black</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="link-special-here"></div>
+        <div class="product-section text-center" id="product-section">
+            <h1>Special sneaker</h1>
+            <div class="product-container">
+                <div class="special-detail" id="special-detail" style="order: 1;">
+                    <iframe id="data-special-frame" src="/templates/product-1/index.html" frameborder="0" width="100%"
+                        height="100%"></iframe>
+                </div>
+                <div class="product balmain-product" id="special-section-1" style="order: 2;">
+                    <img src="/images/products/Balmain/main-page/unicorn-black-white.png" id="special-1">
+                    <div class="product-description">
+                        <h5>Adizero Adios Pro 3 M</h5>
+                        <div class="star-rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>4.000.000</h4>
+                    </div>
+                    <i class="bi bi-cart2 cart" onclick="showDetailSpecial('1')"></i>
+                    <i class="bi bi-x-lg" id="close-iframe-1" onclick="hideDetailSpecial()"></i>
+                    <i class="bi bi-suit-heart heart"></i>
+                </div>
+                <div class="product balmain-product" id="special-section-2" style="order: 3;">
+                    <img src="/images/products/Balmain/main-page/unicorn-white.png" id="special-2">
+                    <div class="product-description">
+                        <h5>Golf Tour360 22 Twin Boa Boost</h5>
+                        <div class="star-rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>6.500.000</h4>
+                    </div>
+                    <i class="bi bi-cart2 cart" onclick="showDetailSpecial('2')"></i>
+                    <i class="bi bi-x-lg" id="close-iframe-2" onclick="hideDetailSpecial()"></i>
+                    <i class="bi bi-suit-heart heart"></i>
+                </div>
+                <div class="product balenciaga-product" id="special-section-3" style="order: 4;">
+                    <img src="/images/products/Balenciaga/detail/1/overall-1.png" id="special-3">
+                    <div class="product-description">
+                        <h5>Adizero Adios Pro 3 M</h5>
+                        <div class="star-rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>4.000.000</h4>
+                    </div>
+                    <i class="bi bi-cart2 cart" onclick="showDetailSpecial('3')"></i>
+                    <i class="bi bi-x-lg" id="close-iframe-3" onclick="hideDetailSpecial()"></i>
+                    <i class="bi bi-suit-heart heart"></i>
+                </div>
+                <div class="product balenciaga-product" id="special-section-4" style="order: 5;">
+                    <img src="/images/products/Balenciaga/detail/2/overall-1.png" id="special-4">
+                    <div class="product-description">
+                        <h5>Golf Tour360 22 Twin Boa Boost</h5>
+                        <div class="star-rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>6.500.000</h4>
+                    </div>
+                    <i class="bi bi-cart2 cart" onclick="showDetailSpecial('4')"></i>
+                    <i class="bi bi-x-lg" id="close-iframe-4" onclick="hideDetailSpecial()"></i>
+                    <i class="bi bi-suit-heart heart"></i>
+                </div>
+            </div>
+        </div>
+
+        <div id="link-suggestion-here"></div>
+        <div class="product-section text-center" id="product-section">
+            <h1>Best seller</h1>
+            <div class="product-container">
+                <div class="suggestion-detail" id="suggestion-detail" style="order: 1s;"> <iframe
+                        id="data-suggestion-frame" src="/templates/product-5/index.html" frameborder="0" width="100%"
+                        height="100%"></iframe>
+                </div>
+                <div class="product balenciaga-product" id="suggestion-section-1" style="order: 2;">
+                    <img src="/images/products/Balenciaga/detail/3/overall-1.png">
+                    <div class="product-description">
+                        <h5>Air Jordan 1 Elevate High</h5>
+                        <div class="star-rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>2.500.000</h4>
+                    </div>
+                    <i class="bi bi-cart2 cart" onclick="showSuggestionDetail('1','5')"></i>
+                    <i class="bi bi-x-lg" id="close-suggestion-1" onclick="hideSuggestionDetail()"></i>
+                    <i class="bi bi-suit-heart heart"></i>
+                </div>
+                <div class="product balenciaga-product" id="suggestion-section-2" style="order: 3;">
+                    <img src="/images/products/Balenciaga/detail/4/overall-1.png">
+                    <div class="product-description">
+                        <h5>Air Jordan 1 Elevate High</h5>
+                        <div class="star-rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>2.500.000</h4>
+                    </div>
+                    <i class="bi bi-cart2 cart" onclick="showSuggestionDetail('2','6')"></i>
+                    <i class="bi bi-x-lg" id="close-suggestion-2" onclick="hideSuggestionDetail()"></i>
+                    <i class="bi bi-suit-heart heart"></i>
+                </div>
+                <div class="product balenciaga-product" id="suggestion-section-3" style="order: 4;">
+                    <img src="/images/products/Balenciaga/detail/5/overall-1.png">
+                    <div class="product-description">
+                        <h5>MLB - Big Ball Chunky Varsity</h5>
+                        <div class="star-rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>2.500.000</h4>
+                    </div>
+                    <i class="bi bi-cart2 cart" onclick="showSuggestionDetail('3','7')"></i>
+                    <i class="bi bi-x-lg" id="close-suggestion-3" onclick="hideSuggestionDetail()"></i>
+                    <i class="bi bi-suit-heart heart"></i>
+                </div>
+                <div class="product balenciaga-product" id="suggestion-section-4" style="order: 5;">
+                    <img src="/images/products/Balenciaga/detail/6/overall-1.png">
+                    <div class="product-description">
+                        <h5>MLB - Big Ball Chunky Varsity</h5>
+                        <div class="star-rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>2.500.000</h4>
+                    </div>
+                    <i class="bi bi-cart2 cart" onclick="showSuggestionDetail('4','8')"></i>
+                    <i class="bi bi-x-lg" id="close-suggestion-4" onclick="hideSuggestionDetail()"></i>
+                    <i class="bi bi-suit-heart heart"></i>
+                </div>
+                <div class="product balmain-product" id="suggestion-section-5" style="order: 6;">
+                    <img src="/images/products/Balmain/main-page/unicorn-black-green.png">
+                    <div class="product-description">
+                        <h5>Air Jordan 1 Elevate High</h5>
+                        <div class="star-rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>2.500.000</h4>
+                    </div>
+                    <i class="bi bi-cart2 cart" onclick="showSuggestionDetail('5','9')"></i>
+                    <i class="bi bi-x-lg" id="close-suggestion-5" onclick="hideSuggestionDetail()"></i>
+                    <i class="bi bi-suit-heart heart"></i>
+                </div>
+                <div class="product balmain-product" id="suggestion-section-6" style="order: 7;">
+                    <img src="/images/products/Balmain/main-page/b-bold-black.png">
+                    <div class="product-description">
+                        <h5>MLB - Big Ball Chunky Varsity</h5>
+                        <div class="star-rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>2.500.000</h4>
+                    </div>
+                    <i class="bi bi-cart2 cart" onclick="showSuggestionDetail('6','10')"></i>
+                    <i class="bi bi-x-lg" id="close-suggestion-6" onclick="hideSuggestionDetail()"></i>
+                    <i class="bi bi-suit-heart heart"></i>
+                </div>
+                <div class="product balmain-product" id="suggestion-section-7" style="order: 8;">
+                    <img src="/images/products/Balmain/main-page/b-bold-white.png">
+                    <div class="product-description">
+                        <h5>Air Jordan 1 Elevate High</h5>
+                        <div class="star-rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>2.500.000</h4>
+                    </div>
+                    <i class="bi bi-cart2 cart" onclick="showSuggestionDetail('7','11')"></i>
+                    <i class="bi bi-x-lg" id="close-suggestion-7" onclick="hideSuggestionDetail()"></i>
+                    <i class="bi bi-suit-heart heart"></i>
+                </div>
+                <div class="product balmain-product" id="suggestion-section-8" style="order: 9;">
+                    <img src="/images/products/Balmain/main-page/unicorn-knit-white.png">
+                    <div class="product-description">
+                        <h5>MLB - Big Ball Chunky Varsity</h5>
+                        <div class="star-rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>2.500.000</h4>
+                    </div>
+                    <i class="bi bi-cart2 cart" onclick="showSuggestionDetail('8','12')"></i>
+                    <i class="bi bi-x-lg" id="close-suggestion-8" onclick="hideSuggestionDetail()"></i>
+                    <i class="bi bi-suit-heart heart"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sale-off-section">
+            <div class="sale-off-container">
+                <div id="link-sale-off-here"></div>
+                <div class="sale-off-banner">
+                    <img src="/images/banners/Screenshot 2024-05-27 175250.png" alt="">
+                    <div class="btn-section">
+                        <div class="btn-click-sale-off" id="sale-off-btn">
+                            <p>BUY NOW</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sale-off-item" id="sale-off-item">
+                    <iframe class="sale-off-frame" src="/templates/sale-off/index.html" frameborder="0" width="100%"
+                        height="100%"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const divItem = document.getElementById("sale-off-btn");
+            divItem.addEventListener('click', () => {
+                document.getElementById("sale-off-item").style.display = "block";
+            });
+
+            const divItem2 = document.getElementById("sale-off-item");
+            divItem2.addEventListener('mouseleave', () => {
+                document.getElementById("sale-off-item").style.display = "none";
+            })
+        </script>
+
+        <div id="link-brand-here"></div>
+        <!--Thương hiệu liên kết-->
+        <div class="bannerSection" id="brand-logo-section">
+            <h1>Official retail store of</h1>
+            <div class="banContainer">
+                <div class="brand">
+                    <a href="https://www.balenciaga.com/en-en"><img
+                            src="images/banners/balenciaga-brandlogo.net_.png"></a>
+                </div>
+                <div class="brand">
+                    <a href="https://vn.balmain.com/en"><img src="images/banners/TBM.png"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="description" id="about-us">
+                <h4>Thông tin liên hệ</h4>
+                <p>Email: ncc9173@gmail.com <br>CSKH: 1900 1537 - 1900 1680</p>
+            </div>
+            <div class="description">
+                <h4>Chi nhánh</h4>
+                <ol class="storeAddress">
+                    <li><i class="bi bi-shop"></i>720A Điện Biên Phủ, Bình Thạnh, Thành phố Hồ Chí Minh</li>
+                    <li><i class="bi bi-shop"></i>90 Nguyễn Hữu Cảnh, Phường 22, Bình Thạnh, Thành phố Hồ Chí Minh
+                    </li>
+                    <li><i class="bi bi-shop"></i>88 P. Quảng An, Quảng An, Tây Hồ, Hà Nội</li>
+                    <li><i class="bi bi-shop"></i>K5, Đ. Nghi Tàm/11 Đ. Xuân Diệu, Quảng An, Tây Hồ, Hà Nội</li>
+                    <li><i class="bi bi-shop"></i>105 Võ Nguyên Giáp, Khuê Mỹ, Ngũ Hành Sơn, Đà Nẵng</li>
+                </ol>
+            </div>
+            <div class="description" id="follow">
+                <h4>Theo dõi</h4>
+                <a href="https://www.facebook.com/boba.duck" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/nguyencuong917/"><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-pinterest"></i></a>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>Copyright &COPY; Nguyễn Chí Cường D21_TH05 DH52110660</p>
+        </div>
+    </footer>
+
+    <!--
+    <script>
+        window.addEventListener('scroll', () => {
+            if (specialOpening > 0) {
+                hideDetailSpecial();
+            }
+            else if (suggestionOpening > 0) {
+                hideSuggestionDetail();
+            }
+            dataLocation = "1";
+        })
+    </script>-->
+</body>
+
+</html>
